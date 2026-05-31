@@ -2,6 +2,11 @@
 
 A futuristic, highly animated, and premium education student dashboard prototype that fetches live course data from Supabase and implements high-performance, layout-shift-free interactions.
 
+Live Demo
+
+Deployed URL: https://your-app.vercel.app
+GitHub Repo: https://github.com/aryan0880/student-dashboard
+
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
