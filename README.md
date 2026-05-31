@@ -59,6 +59,16 @@ The tiles in the Bento Grid do not pop in abruptly. They inherit variants from [
 
 ---
 
+Challenges & Decisions
+1. Server vs Client boundary for animations
+The biggest challenge was keeping data fetching in Server Components while still using Framer Motion, which requires a browser environment. The solution was to pass all fetched data as props from the server page to the animated client leaf components. This keeps the bundle small and the data fetch fast.
+2. Avoiding layout shifts in animations
+The spec required zero layout shifts. The natural instinct for a progress bar is to animate width, but that triggers a browser relayout on every frame. Switching to scaleX with transform-origin: left gives the same visual result using only the GPU compositor — no relayout.
+3. Dynamic icon rendering from Supabase
+The icon_name field in the database is a string like "BookOpen". Lucide React exports components by name, so a dynamic import map was created to resolve these strings to actual components at render time, with a fallback for unknown names.
+4. Contribution graph without a library
+Rather than pulling in a chart library, the activity tile is a pure JSX grid — a 7-column CSS grid of small divs, each coloured with an opacity derived from mock activity data. This keeps the bundle lean and gives full control over the animation.
+
 ## 🔧 Local Development & Setup
 
 1. **Clone the repository**:
