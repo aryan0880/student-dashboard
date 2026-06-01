@@ -4,7 +4,7 @@ A futuristic, highly animated, and premium education student dashboard prototype
 
 Live Demo
 
-Deployed URL: https://your-app.vercel.app
+Deployed URL: https://student-dashboard-nu-eight.vercel.app
 GitHub Repo: https://github.com/aryan0880/student-dashboard
 
 ## 🛠️ Tech Stack
