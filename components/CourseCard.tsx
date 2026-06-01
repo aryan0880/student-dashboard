@@ -21,7 +21,7 @@ export default function CourseCard({
     return (
         <motion.article
             whileHover={{
-                scale: 1.02,
+                scale: 1.04,
                 boxShadow:
                     "0 0 30px rgba(255,255,255,0.06), 0 0 60px rgba(120,119,198,0.05)",
             }}
@@ -36,7 +36,7 @@ export default function CourseCard({
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-emerald-500/5 pointer-events-none" />
 
             {/* SVG Noise Grain Texture */}
-            <div 
+            <div
                 className="absolute inset-0 opacity-[0.035] mix-blend-overlay pointer-events-none"
                 style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
@@ -73,10 +73,9 @@ export default function CourseCard({
                             opacity: 1,
                         }}
                         transition={{
-                            duration: 1,
                             type: "spring",
-                            stiffness: 100,
-                            damping: 20,
+                            stiffness: 120,
+                            damping: 18,
                         }}
                         style={{ transformOrigin: "left" }}
                         className="h-full w-full rounded-full bg-white"
